@@ -1,5 +1,5 @@
 [tool.poetry]
-authors = ["SFU Database System Lab <dsl.cs.sfu@gmail.com>"] 
+authors = ["SFU Database System Lab <dsl.cs.sfu@gmail.com>"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Topic :: Software Development :: Build Tools",
@@ -11,14 +11,14 @@ classifiers = [
   "Intended Audience :: Healthcare Industry",
   "Topic :: Scientific/Engineering",
   "Framework :: IPython",
-] 
-description = "Load data from databases to dataframes, the fastest way." 
-keywords = ["read_sql"] 
-license = "MIT" 
-maintainers = ["Weiyuan Wu <youngw@sfu.ca>"] 
-name = "connectorx" 
+]
+description = "Load data from databases to dataframes, the fastest way."
+keywords = ["read_sql"]
+license = "MIT"
+maintainers = ["Weiyuan Wu <youngw@sfu.ca>"]
+name = "connectorx"
 readme = "README.md" # Markdown files are supported
-version = "0.3.3-alpha.2" 
+version = "0.3.3-alpha.2"
 
 [project]
 name = "connectorx" # Target file name of maturin build
@@ -29,11 +29,11 @@ requires-python = ">=3.8"
 [tool.poetry.dependencies]
 dask = {version = "^2021", optional = true, extras = ["dataframe"]}
 modin = {version = ">=0.10", optional = true}
-numpy = ">=1.21.5"
-pandas = {version = "^1", optional = true}
+numpy = ">=1.26"
+pandas = {version = ">=2", optional = true}
 polars = {version = ">=0.8", optional = true}
 pyarrow = {version = ">=4", optional = true}
-python = ">=3.8,<3.12"
+python = ">=3.9,<3.13"
 
 [tool.poetry.extras]
 all = ["dask", "pandas", "modin", "polars", "pyarrow"]
@@ -44,17 +44,17 @@ polars = ["pyarrow", "polars"]
 pyarrow = ["pyarrow"]
 
 [tool.poetry.dev-dependencies]
-black = "^21.4b0"
+black = "^24.3.0"
 contexttimer = "^0.3.3"
 dask = {extras = ["dataframe"], version = "^2021.7.0"}
 docopt = "^0.6.2"
-ipython = "^7.31.1"
+ipython = ">=8"
 maturin = ">=1.0,<2.0"
 modin = {extras = ["dask"], version = ">=0.10.1"}
 polars = ">=0.8"
 pyarrow = ">=4"
-pytest = "^6.2"
-pytest-benchmark = "^3.4.1"
+pytest = "^8.1.1"
+pytest-benchmark = "^4.0.0"
 twine = "^3.4.1"
 
 [tool.pytest.ini_options]
